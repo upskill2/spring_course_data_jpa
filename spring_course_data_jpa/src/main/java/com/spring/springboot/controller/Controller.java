@@ -62,4 +62,11 @@ public class Controller {
 
     }
 
+    @GetMapping("/employees/name/{name}")
+    public List<Employee> showAllEmpsByName(@PathVariable String name){
+
+
+        return employeeService.findAllByName(name);
+    }
+
 }
